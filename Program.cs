@@ -16,16 +16,25 @@ namespace BMI
         static void Main(string[] args)
         {
             Console.WriteLine("What is your BMI?");
-            Console.Write("(KG) Weight: ");
+            Console.Write("(Kg) Weight: ");
             double weight=double.Parse(Console.ReadLine());
-            Console.Write(" (M) Height: ");
+            Console.Write("(Cm) Height: ");
             double height=double.Parse(Console.ReadLine());
             Console.WriteLine("Your BMI: {0,0:F2}",BMI(weight,height));
+            Console.WriteLine("Your weight is "+ Weight(BMI(weight, height)));
         }
         static double BMI(double w, double h)
         {
+            h /= 100;
             double result = w / (h * h);
             return result;
+        }
+        static string Weight(double bmi)
+        {
+            if (bmi < 18.5) return "underweight";
+            else if (bmi < 25) return "correct weight";
+            else return "overweight";
+
         }
     }
 }
