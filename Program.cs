@@ -1,6 +1,11 @@
 ﻿//Napisz program, który oblicza wskaźnik masy ciała BMI. Program ma prosić
 //użytkownika o podanie wagi w kilogramach oraz wzrostu w metrach.
 //Wzór: BMI= masa/wzrost^2
+//Po obliczeniu wskaźnika BMI program powinien wyświetlać stosowną informację w
+//zależności od wartości wskaźnika:
+//< 18,5 – niedowaga,
+//18,5-24,99 – wartość prawidłowa,
+//≥ 25,0 – nadwaga
 
 using System;
 
